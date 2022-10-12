@@ -72,3 +72,25 @@ function getReversedString(letter) {
 
 console.log(getReversedString('Hello!')); // '!olleH'
 console.log(getReversedString('Arrays')); // 'syarrA'
+
+// Write the isPalindrome function. Inside the isPalindrome function, call the
+// getReversedString function. It should be case-insensitive and shouldn't take spaces into
+// consideration.
+
+function isPalindrome(letter) {
+    function getReversedString(letter) {
+        let arrayString = [];
+        let letterOfArray = letter.split('')
+        for (let i = letterOfArray.length - 1; i >= 0; --i) {
+            arrayString.push(letterOfArray[i]);
+        }
+        return arrayString.join('');
+    }
+    const reversedStringResult = getReversedString(letter);
+    return reversedStringResult;
+}
+
+console.log(isPalindrome('Kayak')); // true
+console.log(isPalindrome('Racecar')); // true
+console.log(isPalindrome('Was it a cat I saw')); // true
+console.log(isPalindrome('Hello!')); // false
