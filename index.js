@@ -21,3 +21,18 @@ while (index < 3) {
 for (let i = 0; i < 3; ++i) {
     console.log(vegetables[i]);
 }
+
+// Write the getSmallestNumber function
+
+function getSmallestNumber(numberOfArray) {
+    let theSmallestNumber = numberOfArray[0];
+    for (let i = 0; i < numberOfArray.length; ++i) {
+        if(numberOfArray[i] < theSmallestNumber) {
+            theSmallestNumber = numberOfArray[i]
+        }
+    }
+    return theSmallestNumber;
+}
+
+console.log(getSmallestNumber([2, -5, 10, 1, 4])); // -5
+getSmallestNumber([200, 25, 4, 123, 87]); // 4
