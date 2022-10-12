@@ -58,3 +58,17 @@ function getSquaredNumbers(number) {
 }
 console.log(getSquaredNumbers([1, 2, 3, 4, 5])); // [1, 4, 9, 16, 25]
 console.log(getSquaredNumbers([6, 7, 8, 9, 10])); // [36, 49, 64, 81, 100]
+
+// Write the getReversedString function
+
+function getReversedString(letter) {
+    let arrayString = [];
+    let letterOfArray = letter.split('')
+    for (let i = letterOfArray.length - 1; i >= 0; --i) {
+        arrayString.push(letterOfArray[i]);
+    }
+    return arrayString.join('');
+}
+
+console.log(getReversedString('Hello!')); // '!olleH'
+console.log(getReversedString('Arrays')); // 'syarrA'
