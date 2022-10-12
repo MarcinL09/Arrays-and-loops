@@ -27,12 +27,21 @@ for (let i = 0; i < 3; ++i) {
 function getSmallestNumber(numberOfArray) {
     let theSmallestNumber = numberOfArray[0];
     for (let i = 0; i < numberOfArray.length; ++i) {
-        if(numberOfArray[i] < theSmallestNumber) {
+        if (numberOfArray[i] < theSmallestNumber) {
             theSmallestNumber = numberOfArray[i]
         }
     }
     return theSmallestNumber;
 }
-
 console.log(getSmallestNumber([2, -5, 10, 1, 4])); // -5
-getSmallestNumber([200, 25, 4, 123, 87]); // 4
+console.log(getSmallestNumber([200, 25, 4, 123, 87])); // 4
+
+//Write the getSmallestNumber function using the sort function.
+const arrayOfNumbers = [2, -5, 10, 1, 4, 5]
+
+const smallestNumber = arrayOfNumbers.sort(
+function (firstNumber, secondNumber) {
+        return firstNumber - secondNumber;
+    }
+)
+console.log(smallestNumber); // -5
