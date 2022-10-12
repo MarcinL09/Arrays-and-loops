@@ -45,3 +45,16 @@ function (firstNumber, secondNumber) {
     }
 )
 console.log(smallestNumber); // -5
+
+// Write the getSquaredNumbers function
+
+function getSquaredNumbers(number) {
+    let squaredNumber = [];
+    for (let i = 0; i < number.length; ++i) {
+        const item = number[i];
+        squaredNumber.push(item * item);
+    }
+    return squaredNumber;
+}
+console.log(getSquaredNumbers([1, 2, 3, 4, 5])); // [1, 4, 9, 16, 25]
+console.log(getSquaredNumbers([6, 7, 8, 9, 10])); // [36, 49, 64, 81, 100]
