@@ -80,7 +80,7 @@ console.log(getReversedString('Arrays')); // 'syarrA'
 function isPalindrome(letter) {
     function getReversedString(letter) {
         let arrayString = [];
-        let letterOfArray = letter.split('')
+        let letterOfArray = letter.toLowerCase().split('')
         for (let i = letterOfArray.length - 1; i >= 0; --i) {
             arrayString.push(letterOfArray[i]);
         }
@@ -102,8 +102,9 @@ console.log(isPalindrome('Hello!')); // false
 
 function countLetters(letters) {
     let lettersCounted = {};
+    let lettersOfObject = letters.toLowerCase();
     for (let i = 0; i < letters.length; ++i) {
-        const character = letters.toLowerCase()[i];
+        const character = lettersOfObject[i];
         if (!lettersCounted[character]) {
             lettersCounted[character] = 0;
         }
@@ -113,3 +114,14 @@ function countLetters(letters) {
 }
 const lettersObject = countLetters('The quick brown fox jumps over the lazy dog');
 console.log(lettersObject);
+
+// Sum of positive
+function positiveSum(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; ++i) {
+        if (arr[i] > 0) {
+            sum = sum + arr[i];
+        }
+    }
+    return sum;
+}
