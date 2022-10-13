@@ -125,3 +125,15 @@ function positiveSum(arr) {
     }
     return sum;
 }
+
+// Square(n) Sum
+
+function squareSum(numbers) {
+    let total = 0;
+    for (let i = 0; i < numbers.length; ++i) {
+        total = total + numbers[i] **2
+    }
+    return total;
+}
+
+console.log(squareSum([1, 2, 2]))
