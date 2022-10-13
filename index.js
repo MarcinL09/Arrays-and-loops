@@ -94,3 +94,22 @@ console.log(isPalindrome('Kayak')); // true
 console.log(isPalindrome('Racecar')); // true
 console.log(isPalindrome('Was it a cat I saw')); // true
 console.log(isPalindrome('Hello!')); // false
+
+// Write the countLetters function. It should return an object representing the number of letters in
+// the given text. Ignore spaces and make sure your function is case-insensitive.
+
+
+
+function countLetters(letters) {
+    let lettersCounted = {};
+    for (let i = 0; i < letters.length; ++i) {
+        const character = letters.toLowerCase()[i];
+        if (!lettersCounted[character]) {
+            lettersCounted[character] = 0;
+        }
+        lettersCounted[character]++;
+    }
+    return lettersCounted;
+}
+const lettersObject = countLetters('The quick brown fox jumps over the lazy dog');
+console.log(lettersObject);
