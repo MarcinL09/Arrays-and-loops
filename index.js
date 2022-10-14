@@ -136,4 +136,20 @@ function squareSum(numbers) {
     return total;
 }
 
-console.log(squareSum([1, 2, 2]))
+console.log(squareSum([1, 2, 2]));
+
+// Abbreviate a Two Word Name
+
+function abbreviationName(name){
+    let nameArray = [name[0]];
+    let abreviation = name.split('');
+    for (let i = 0; i < name.length; ++i) {
+        if(name[i] === " ") {
+            nameArray.push(abreviation[i + 1])
+        }
+    }
+    return nameArray.join('.').toUpperCase();
+}
+
+console.log(abbreviationName('Sam Harris'));
+console.log(abbreviationName('patrick feeney'));
