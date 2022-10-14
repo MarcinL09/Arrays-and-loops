@@ -153,3 +153,22 @@ function abbreviationName(name){
 
 console.log(abbreviationName('Sam Harris'));
 console.log(abbreviationName('patrick feeney'));
+
+// Counting sheep...
+function countSheep(arrayOfSheep) {
+    let present = true;
+    let sheep = 0;
+    for (i = 0; i < arrayOfSheep.length; ++i) {
+        if (arrayOfSheep[i] === present) {
+           sheep++;
+        }
+    }
+    return sheep;
+}
+
+console.log(countSheep([true,  true,  true,  false,
+    true,  true,  true,  true ,
+    true,  false, true,  false,
+    true,  false, false, true ,
+    true,  true,  true,  true ,
+    false, false, true,  true]));
