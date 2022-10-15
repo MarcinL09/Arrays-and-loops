@@ -212,3 +212,15 @@ function maps(value){
 }
 
 console.log(maps([1, 2, 3]))
+
+// Invert values
+function invert(array) {
+    let arrayOfInvertedNumbers = [];
+    for (let i = 0; i < array.length; ++i) {
+        arrayOfInvertedNumbers.push(array[i] * -1);
+    }
+    return arrayOfInvertedNumbers;
+}
+
+console.log(invert([1,2,3,4,5]));
+console.log(invert([1,-2,3,-4,5]))
