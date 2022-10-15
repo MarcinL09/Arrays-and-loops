@@ -253,7 +253,11 @@ function arrayPlusArray(arr1, arr2) {
     return arr1 + arr2; //something went wrong
 }
 // remember to do earlier kata!!!!!!!!!!!!!!!!!!!!
+// If you can't sleep, just count sheep!!
 
+var countSheep = function (num){
+    //your code here
+}
 // Get the mean of an array
 
 function getAverage(marks){
@@ -265,3 +269,15 @@ function getAverage(marks){
 }
 
 console.log(getAverage([3, 5.2, 4, 2, 6]));
+
+// Count the Monkeys!
+
+function monkeyCount(quantity) {
+    let array = [];
+    for (let i = 1; i <= quantity; ++i) {
+        array.push(i)
+
+    }
+    return array;
+}
+console.log(monkeyCount(5));
