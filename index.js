@@ -227,7 +227,7 @@ console.log(invert([1,-2,3,-4,5]));
 
 // Sum Arrays
 function sum(numbers) {
-    let sumOfArray = 0
+    let sumOfArray = 0;
     for (let i = 0; i < numbers.length; ++i) {
         if (numbers === []) {
             return 0;
@@ -238,3 +238,18 @@ function sum(numbers) {
 };
 
 console.log(sum([1, 5.2, 4, 0, -1]))
+
+// Array plus array
+function getArraySum(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; ++i) {
+        sum = sum + numbers[i]
+    }
+    return sum;
+}
+
+console.log(getArraySum([1, 5.2, 4, 0, 1]))
+function arrayPlusArray(arr1, arr2) {
+    return arr1 + arr2; //something went wrong
+}
+
