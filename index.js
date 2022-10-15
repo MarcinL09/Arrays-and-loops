@@ -249,10 +249,10 @@ function getArraySum(numbers) {
 }
 
 console.log(getArraySum([1, 5.2, 4, 0, 1]))
-function arrayPlusArray(arr1, arr2) {
-    return arr1 + arr2; //something went wrong
+function arrayPlusArray(sumOfFirstArray, sumOfSecondArray) {
+    return getArraySum(sumOfFirstArray) + getArraySum(sumOfSecondArray);
 }
-// remember to do earlier kata!!!!!!!!!!!!!!!!!!!!
+console.log(arrayPlusArray([1,2,3, 5], [2, 4 ,8]))
 // If you can't sleep, just count sheep!!
 
 var countSheep = function (num){
@@ -280,4 +280,4 @@ function monkeyCount(quantity) {
     }
     return array;
 }
-console.log(monkeyCount(5));
+console.log(monkeyCount(10));
