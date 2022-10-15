@@ -198,3 +198,17 @@ function findNeedle(haystack) {
 }
 
 console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
+
+
+// Beginner - Lost Without a Map
+
+function maps(value){
+    let doubledNumber = [];
+    for (let i = 0; i < value.length; ++i) {
+        const item = value[i];
+        doubledNumber.push(item * 2);
+    }
+    return doubledNumber;
+}
+
+console.log(maps([1, 2, 3]))
