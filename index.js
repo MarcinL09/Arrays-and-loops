@@ -76,18 +76,30 @@ console.log(getReversedString('Arrays')); // 'syarrA'
 // Write the isPalindrome function. Inside the isPalindrome function, call the
 // getReversedString function. It should be case-insensitive and shouldn't take spaces into
 // consideration.
-
-function isPalindrome(letter) {
-    function getReversedString(letter) {
-        let arrayString = [];
-        let letterOfArray = letter.toLowerCase().split('')
-        for (let i = letterOfArray.length - 1; i >= 0; --i) {
-            arrayString.push(letterOfArray[i]);
-        }
-        return arrayString.join('');
+function getReversedString(stringToReversed) {
+    let arrayString = [];
+    let letterOfArray = stringToReversed.toLowerCase().split("");
+    for (let i = 0; i < letterOfArray.length; ++i) {
+        arrayString.push(letterOfArray[i]);
     }
-    const reversedStringResult = getReversedString(letter);
-    return reversedStringResult;
+    return arrayString.reverse().join("");
+}
+console.log(getReversedString('Kayak')); // true
+console.log(getReversedString('Racecar')); // true
+console.log(getReversedString('Was it a cat I saw')); // true
+console.log(getReversedString('Hello!')); // false
+function isPalindrome(stringToCheck) {
+    let array = []
+    let x = stringToCheck.toLowerCase().split(" ")
+    let reversedStringResult = getReversedString(stringToCheck);
+    for (let i = 0; i < x.length; ++i) {
+        array.push(x[i]);
+    }
+    return array.join("")
+    // if (x === reversedStringResult ) {
+    //     return true;
+    // }
+    // return false;
 }
 
 console.log(isPalindrome('Kayak')); // true
@@ -114,7 +126,38 @@ function countLetters(letters) {
 }
 const lettersObject = countLetters('The quick brown fox jumps over the lazy dog');
 console.log(lettersObject);
+// Write the getAgeDifference function that finds the difference between the youngest and oldest
+// person. Inside of the getAgeDifference function call the getYoungestPerson and
+// getOldestPerson functions that you write yourself.
 
+const peopleArray = [
+    {
+        name: 'Adam',
+        age: 20
+    },
+    {
+        name: 'Amanda',
+        age: 5
+    },
+    {
+        name: 'John',
+        age: 75
+    },
+    {
+        name: 'Dave',
+        age: 15
+    }
+]
+getAgeDifference(peopleArray); // 70
+function getYoungestPerson(people) {
+// ...
+}
+function getOldestPerson(people) {
+// ...
+}
+function getAgeDifference(people) {
+// ...
+}
 // Sum of positive
 function positiveSum(arr) {
     let sum = 0;
