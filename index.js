@@ -252,4 +252,16 @@ console.log(getArraySum([1, 5.2, 4, 0, 1]))
 function arrayPlusArray(arr1, arr2) {
     return arr1 + arr2; //something went wrong
 }
+// remember to do earlier kata!!!!!!!!!!!!!!!!!!!!
 
+// Get the mean of an array
+
+function getAverage(marks){
+    let sum = 0;
+    for (let i = 0; i < marks.length; ++i) {
+        sum = (sum + marks[i]);
+    }
+    return Math.floor(sum/marks.length);
+}
+
+console.log(getAverage([3, 5.2, 4, 2, 6]));
