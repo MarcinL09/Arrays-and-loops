@@ -158,7 +158,7 @@ console.log(abbreviationName('patrick feeney'));
 function countSheep(arrayOfSheep) {
     let present = true;
     let sheep = 0;
-    for (i = 0; i < arrayOfSheep.length; ++i) {
+    for (let i = 0; i < arrayOfSheep.length; ++i) {
         if (arrayOfSheep[i] === present) {
            sheep++;
         }
@@ -172,3 +172,29 @@ console.log(countSheep([true,  true,  true,  false,
     true,  false, false, true ,
     true,  true,  true,  true ,
     false, false, true,  true]));
+
+// Convert number to reversed array of digits
+
+function digitize(number) {
+    let newArray = [];
+    let reversedNumber = number.toString().split('');
+    for (let i = 0; i < number.length; ++i) {
+        newArray.push(reversedNumber[i])
+    }
+    return newArray.reverse();
+}
+
+console.log(digitize(35231));
+
+// A Needle in the Haystack
+
+function findNeedle(haystack) {
+    let item = 'needle';
+    for (let i = 0; i < haystack.length; ++i) {
+        if (haystack[i] === item) {
+            return 'found the needle at position ' + i;
+        }
+    }
+}
+
+console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
