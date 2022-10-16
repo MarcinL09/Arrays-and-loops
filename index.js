@@ -76,30 +76,28 @@ console.log(getReversedString('Arrays')); // 'syarrA'
 // Write the isPalindrome function. Inside the isPalindrome function, call the
 // getReversedString function. It should be case-insensitive and shouldn't take spaces into
 // consideration.
-function getReversedString(stringToReversed) {
+function getReversedString(stringToReverse) {
     let arrayString = [];
-    let letterOfArray = stringToReversed.toLowerCase().split("");
+    let letterOfArray = stringToReverse.toLowerCase().split(" ");
+    let reversedArray = arrayString.reverse()
     for (let i = 0; i < letterOfArray.length; ++i) {
         arrayString.push(letterOfArray[i]);
     }
-    return arrayString.reverse().join("");
+    return reversedArray.join("");
 }
-console.log(getReversedString('Kayak')); // true
-console.log(getReversedString('Racecar')); // true
-console.log(getReversedString('Was it a cat I saw')); // true
-console.log(getReversedString('Hello!')); // false
+
 function isPalindrome(stringToCheck) {
     let array = []
-    let x = stringToCheck.toLowerCase().split(" ")
+    let splitedString = stringToCheck.toLowerCase().split(" ")
     let reversedStringResult = getReversedString(stringToCheck);
-    for (let i = 0; i < x.length; ++i) {
-        array.push(x[i]);
+    for (let i = 0; i < splitedString.length; ++i) {
+        array.push(splitedString[i]);
     }
     return array.join("")
-    // if (x === reversedStringResult ) {
-    //     return true;
-    // }
-    // return false;
+    if (array === reversedStringResult) {
+        return true;
+    }
+    return false;
 }
 
 console.log(isPalindrome('Kayak')); // true
@@ -148,29 +146,29 @@ const peopleArray = [
         age: 15
     }
 ]
-console.log(peopleArray.age);
+console.log(peopleArray);
 function getYoungestPerson(people) {
-    let theYoungestPerson = people[0];
+    let theYoungestPerson = people[0].age;
     for (let i = 0; i < people.length; ++i) {
-        if (people[i] < theYoungestPerson) {
+        if (people[i].age < theYoungestPerson) {
             theYoungestPerson = people[i]
         }
     }
     return theYoungestPerson;
 }
-console.log(getYoungestPerson(peopleArray))
+
 function getOldestPerson(people) {
-    let theOldestPerson = people[0];
+    let theOldestPerson = people[0].age;
     for (let i = 0; i < people.length; ++i) {
-        if (people[i] > theOldestPerson) {
+        if (people[i].age > theOldestPerson) {
             theOldestPerson = people[i]
         }
     }
     return theOldestPerson;
 }
-
+console.log(getOldestPerson(peopleArray))
 function getAgeDifference(people) {
-    return getOldestPerson(people) - getYoungestPerson(people);
+    return getOldestPerson(people).age - getYoungestPerson(people).age;
 }
 console.log(getAgeDifference(peopleArray)); // 70)
 // Sum of positive
