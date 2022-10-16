@@ -61,13 +61,8 @@ console.log(getSquaredNumbers([6, 7, 8, 9, 10])); // [36, 49, 64, 81, 100]
 
 // Write the getReversedString function
 
-function getReversedString(letter) {
-    let arrayString = [];
-    let letterOfArray = letter.split('')
-    for (let i = letterOfArray.length - 1; i >= 0; --i) {
-        arrayString.push(letterOfArray[i]);
-    }
-    return arrayString.join('');
+function getReversedString(stringToReverse) {
+    return stringToReverse.split('').reverse().join('');
 }
 
 console.log(getReversedString('Hello!')); // '!olleH'
@@ -81,9 +76,9 @@ function getReversedString(stringToReverse) {
 }
 
 function isPalindrome(stringToCheck) {
-    let reversedString = getReversedString(stringToCheck).toLowerCase().replaceAll(' ','')
-    let originString = stringToCheck.toLowerCase().replaceAll(' ','')
-    if (reversedString === originString) {
+    const reversedString = getReversedString(stringToCheck).toLowerCase().replaceAll(' ','')
+    const notReversedString = stringToCheck.toLowerCase().replaceAll(' ','')
+    if (reversedString === notReversedString) {
         return true;
     }
     return false;
@@ -97,10 +92,10 @@ console.log(isPalindrome('Hello!')); // false
 // Write the countLetters function. It should return an object representing the number of letters in
 // the given text. Ignore spaces and make sure your function is case-insensitive.
 
-function countLetters(letters) {
+function countLetters(stringToBeCounted) {
     let lettersCounted = {};
-    let lettersOfObject = letters.toLowerCase();
-    for (let i = 0; i < letters.length; ++i) {
+    let lettersOfObject = stringToBeCounted.toLowerCase();
+    for (let i = 0; i < stringToBeCounted.length; ++i) {
         const character = lettersOfObject[i];
         if (!lettersCounted[character]) {
             lettersCounted[character] = 0;
@@ -109,8 +104,8 @@ function countLetters(letters) {
     }
     return lettersCounted;
 }
-const lettersObject = countLetters('The quick brown fox jumps over the lazy dog');
-console.log(lettersObject);
+console.log(countLetters('The quick brown fox jumps over the lazy dog'));
+
 // Write the getAgeDifference function that finds the difference between the youngest and oldest
 // person. Inside of the getAgeDifference function call the getYoungestPerson and
 // getOldestPerson functions that you write yourself.
