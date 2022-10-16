@@ -97,8 +97,6 @@ console.log(isPalindrome('Hello!')); // false
 // Write the countLetters function. It should return an object representing the number of letters in
 // the given text. Ignore spaces and make sure your function is case-insensitive.
 
-
-
 function countLetters(letters) {
     let lettersCounted = {};
     let lettersOfObject = letters.toLowerCase();
@@ -221,12 +219,7 @@ console.log(countSheep([true,  true,  true,  false,
 // Convert number to reversed array of digits
 
 function digitize(number) {
-    let newArray = [];
-    let reversedNumber = number.toString().split('');
-    for (let i = 0; i < number.length; ++i) {
-        newArray.push(reversedNumber[i])
-    }
-    return newArray.reverse();
+    return Array.from(String(number), Number).reverse()
 }
 
 console.log(digitize(35231));
