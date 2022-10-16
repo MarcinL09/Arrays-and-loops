@@ -150,10 +150,8 @@ const peopleArray = [
 ]
 console.log(peopleArray.age);
 function getYoungestPerson(people) {
-    let array = []
     let theYoungestPerson = people[0];
     for (let i = 0; i < people.length; ++i) {
-        array.push(people[i])
         if (people[i] < theYoungestPerson) {
             theYoungestPerson = people[i]
         }
@@ -315,16 +313,16 @@ function arrayPlusArray(sumOfFirstArray, sumOfSecondArray) {
 console.log(arrayPlusArray([1,2,3, 5], [2, 4 ,8]))
 // If you can't sleep, just count sheep!!
 
-let countSheep = function (number){
+function countSheeps(number){
     let result = '';
     for (let i = 1; i <= number; i++) {
         result += i.toString() + ' sheep...';
     }
     return result;
 }
-console.log(countSheep(10));
-// Get the mean of an array
 
+// Get the mean of an array
+console.log(countSheeps(10))
 function getAverage(marks){
     let sum = 0;
     for (let i = 0; i < marks.length; ++i) {
