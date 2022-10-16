@@ -77,24 +77,13 @@ console.log(getReversedString('Arrays')); // 'syarrA'
 // getReversedString function. It should be case-insensitive and shouldn't take spaces into
 // consideration.
 function getReversedString(stringToReverse) {
-    let arrayString = [];
-    let letterOfArray = stringToReverse.toLowerCase().split(" ");
-    let reversedArray = arrayString.reverse()
-    for (let i = 0; i < letterOfArray.length; ++i) {
-        arrayString.push(letterOfArray[i]);
-    }
-    return reversedArray.join("");
+   return stringToReverse.split('').reverse().join('');
 }
 
 function isPalindrome(stringToCheck) {
-    let array = []
-    let splitedString = stringToCheck.toLowerCase().split(" ")
-    let reversedStringResult = getReversedString(stringToCheck);
-    for (let i = 0; i < splitedString.length; ++i) {
-        array.push(splitedString[i]);
-    }
-    return array.join("")
-    if (array === reversedStringResult) {
+    let reversedString = getReversedString(stringToCheck).toLowerCase().replaceAll(' ','')
+    let originString = stringToCheck.toLowerCase().replaceAll(' ','')
+    if (reversedString === originString) {
         return true;
     }
     return false;
