@@ -148,16 +148,33 @@ const peopleArray = [
         age: 15
     }
 ]
-getAgeDifference(peopleArray); // 70
+console.log(peopleArray.age);
 function getYoungestPerson(people) {
-// ...
+    let array = []
+    let theYoungestPerson = people[0];
+    for (let i = 0; i < people.length; ++i) {
+        array.push(people[i])
+        if (people[i] < theYoungestPerson) {
+            theYoungestPerson = people[i]
+        }
+    }
+    return theYoungestPerson;
 }
+console.log(getYoungestPerson(peopleArray))
 function getOldestPerson(people) {
-// ...
+    let theOldestPerson = people[0];
+    for (let i = 0; i < people.length; ++i) {
+        if (people[i] > theOldestPerson) {
+            theOldestPerson = people[i]
+        }
+    }
+    return theOldestPerson;
 }
+
 function getAgeDifference(people) {
-// ...
+    return getOldestPerson(people) - getYoungestPerson(people);
 }
+console.log(getAgeDifference(peopleArray)); // 70)
 // Sum of positive
 function positiveSum(arr) {
     let sum = 0;
@@ -298,9 +315,14 @@ function arrayPlusArray(sumOfFirstArray, sumOfSecondArray) {
 console.log(arrayPlusArray([1,2,3, 5], [2, 4 ,8]))
 // If you can't sleep, just count sheep!!
 
-var countSheep = function (num){
-    //your code here
+let countSheep = function (number){
+    let result = '';
+    for (let i = 1; i <= number; i++) {
+        result += i.toString() + ' sheep...';
+    }
+    return result;
 }
+console.log(countSheep(10));
 // Get the mean of an array
 
 function getAverage(marks){
