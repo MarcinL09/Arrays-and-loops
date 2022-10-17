@@ -73,12 +73,9 @@ console.log(getReversedString('Arrays')); // 'syarrA'
 // consideration.
 
 function isPalindrome(stringToCheck) {
-    const reversedString = getReversedString(stringToCheck).toLowerCase().replaceAll(' ','')
-    const notReversedString = stringToCheck.toLowerCase().replaceAll(' ','')
-    if (reversedString === notReversedString) {
-        return true;
-    }
-    return false;
+    const reversedString = getReversedString(stringToCheck).toLowerCase().replaceAll(' ','');
+    const stringBeforeReverseing = stringToCheck.toLowerCase().replaceAll(' ','');
+    return reversedString === stringBeforeReverseing;
 }
 
 console.log(isPalindrome('Kayak')); // true
