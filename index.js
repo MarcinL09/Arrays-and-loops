@@ -159,7 +159,7 @@ function positiveSum(array) {
     }
     return sum;
 }
-
+console.log(positiveSum([1,2]))
 // Square(n) Sum
 
 function squareSum(numbers) {
@@ -298,7 +298,7 @@ console.log(countSheeps(10))
 function getAverage(marks){
     let sum = 0;
     for (let i = 0; i < marks.length; ++i) {
-        sum = (sum + marks[i]);
+        sum = sum + marks[i];
     }
     return Math.floor(sum/marks.length);
 }
@@ -311,7 +311,6 @@ function monkeyCount(quantity) {
     let array = [];
     for (let i = 1; i <= quantity; ++i) {
         array.push(i)
-
     }
     return array;
 }
