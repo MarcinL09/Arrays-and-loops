@@ -24,11 +24,11 @@ for (let i = 0; i < 3; ++i) {
 
 // Write the getSmallestNumber function
 
-function getSmallestNumber(numberOfArray) {
-    let theSmallestNumber = numberOfArray[0];
-    for (let i = 0; i < numberOfArray.length; ++i) {
-        if (numberOfArray[i] < theSmallestNumber) {
-            theSmallestNumber = numberOfArray[i]
+function getSmallestNumber(number) {
+    let theSmallestNumber = number[0];
+    for (let i = 0; i < number.length; ++i) {
+        if (number[i] < theSmallestNumber) {
+            theSmallestNumber = number[i]
         }
     }
     return theSmallestNumber;
