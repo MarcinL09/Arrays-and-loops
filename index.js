@@ -87,17 +87,19 @@ console.log(isPalindrome('Hello!')); // false
 // the given text. Ignore spaces and make sure your function is case-insensitive.
 
 function countLetters(stringToBeCounted) {
-    let lettersCounted = {};
-    let lettersOfObject = stringToBeCounted.toLowerCase();
+    const lettersCounted = {};
+    const lowerCaseString = stringToBeCounted.toLowerCase();
     for (let i = 0; i < stringToBeCounted.length; ++i) {
-        const character = lettersOfObject[i];
-        if (!lettersCounted[character]) {
-            lettersCounted[character] = 0;
-        }
+        const character = lowerCaseString[i];
+        if (!lettersCounted[character] && character !== ' ') {
+            lettersCounted[character] = 1;
+        } else if (character !== ' ') {
         lettersCounted[character]++;
+        }
     }
     return lettersCounted;
 }
+
 console.log(countLetters('The quick brown fox jumps over the lazy dog'));
 
 // Write the getAgeDifference function that finds the difference between the youngest and oldest
@@ -313,3 +315,4 @@ function monkeyCount(quantity) {
     return array;
 }
 console.log(monkeyCount(10));
+
