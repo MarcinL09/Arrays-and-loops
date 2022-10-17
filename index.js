@@ -150,11 +150,11 @@ function getAgeDifference(people) {
 }
 console.log(getAgeDifference(peopleArray)); // 70)
 // Sum of positive
-function positiveSum(arr) {
+function positiveSum(array) {
     let sum = 0;
-    for (let i = 0; i < arr.length; ++i) {
-        if (arr[i] > 0) {
-            sum = sum + arr[i];
+    for (let i = 0; i < array.length; ++i) {
+        if (array[i] > 0) {
+            sum = sum + array[i];
         }
     }
     return sum;
