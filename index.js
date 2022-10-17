@@ -165,7 +165,7 @@ function positiveSum(array) {
 function squareSum(numbers) {
     let total = 0;
     for (let i = 0; i < numbers.length; ++i) {
-        total = total + numbers[i] **2
+        total = total + numbers[i] ** 2
     }
     return total;
 }
@@ -175,11 +175,11 @@ console.log(squareSum([1, 2, 2]));
 // Abbreviate a Two Word Name
 
 function abbreviationName(name){
-    let nameArray = [name[0]];
-    let abreviation = name.split('');
+    const nameArray = [name[0]];
+    const abbreviation = name.split('');
     for (let i = 0; i < name.length; ++i) {
         if(name[i] === " ") {
-            nameArray.push(abreviation[i + 1])
+            nameArray.push(abbreviation[i + 1])
         }
     }
     return nameArray.join('.').toUpperCase();
@@ -190,7 +190,7 @@ console.log(abbreviationName('patrick feeney'));
 
 // Counting sheep...
 function countSheep(arrayOfSheep) {
-    let present = true;
+    const present = true;
     let sheep = 0;
     for (let i = 0; i < arrayOfSheep.length; ++i) {
         if (arrayOfSheep[i] === present) {
@@ -201,11 +201,11 @@ function countSheep(arrayOfSheep) {
 }
 
 console.log(countSheep([true,  true,  true,  false,
-    true,  true,  true,  true ,
-    true,  false, true,  false,
-    true,  false, false, true ,
-    true,  true,  true,  true ,
-    false, false, true,  true]));
+                        true,  true,  true,  true ,
+                        true,  false, true,  false,
+                        true,  false, false, true ,
+                        true,  true,  true,  true ,
+                        false, false, true,  true]));
 
 // Convert number to reversed array of digits
 
@@ -221,7 +221,7 @@ function findNeedle(haystack) {
     let item = 'needle';
     for (let i = 0; i < haystack.length; ++i) {
         if (haystack[i] === item) {
-            return 'found the needle at position ' + i;
+            return `found the ${item} at position ` + i;
         }
     }
 }
@@ -232,7 +232,7 @@ console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "rand
 // Beginner - Lost Without a Map
 
 function maps(value){
-    let doubledNumber = [];
+    const doubledNumber = [];
     for (let i = 0; i < value.length; ++i) {
         const item = value[i];
         doubledNumber.push(item * 2);
@@ -244,7 +244,7 @@ console.log(maps([1, 2, 3]))
 
 // Invert values
 function invert(array) {
-    let arrayOfInvertedNumbers = [];
+    const arrayOfInvertedNumbers = [];
     for (let i = 0; i < array.length; ++i) {
         arrayOfInvertedNumbers.push(array[i] * -1);
     }
@@ -286,8 +286,9 @@ console.log(arrayPlusArray([1,2,3, 5], [2, 4 ,8]))
 
 function countSheeps(number){
     let result = '';
+    const string = 'sheep...'
     for (let i = 1; i <= number; i++) {
-        result += i.toString() + ' sheep...';
+        result += `${i} ${string}`;
     }
     return result;
 }
