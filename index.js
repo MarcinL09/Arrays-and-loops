@@ -24,11 +24,11 @@ for (let i = 0; i < 3; ++i) {
 
 // Write the getSmallestNumber function
 
-function getSmallestNumber(number) {
-    let theSmallestNumber = number[0];
-    for (let i = 0; i < number.length; ++i) {
-        if (number[i] < theSmallestNumber) {
-            theSmallestNumber = number[i]
+function getSmallestNumber(arrayOfNumbers) {
+    let theSmallestNumber = arrayOfNumbers[0];
+    for (let i = 0; i < arrayOfNumbers.length; ++i) {
+        if (arrayOfNumbers[i] < theSmallestNumber) {
+            theSmallestNumber = arrayOfNumbers[i]
         }
     }
     return theSmallestNumber;
@@ -48,13 +48,13 @@ console.log(smallestNumber); // -5
 
 // Write the getSquaredNumbers function
 
-function getSquaredNumbers(number) {
-    let squaredNumber = [];
-    for (let i = 0; i < number.length; ++i) {
-        const item = number[i];
-        squaredNumber.push(item * item);
+function getSquaredNumbers(arrayOfNumbers) {
+    const arrayOfSquareNumbers = [];
+    for (let i = 0; i < arrayOfNumbers.length; ++i) {
+        const item = arrayOfNumbers[i];
+        arrayOfSquareNumbers.push(item * item);
     }
-    return squaredNumber;
+    return arrayOfSquareNumbers;
 }
 console.log(getSquaredNumbers([1, 2, 3, 4, 5])); // [1, 4, 9, 16, 25]
 console.log(getSquaredNumbers([6, 7, 8, 9, 10])); // [36, 49, 64, 81, 100]
