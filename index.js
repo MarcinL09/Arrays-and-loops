@@ -40,7 +40,7 @@ console.log(getSmallestNumber([200, 25, 4, 123, 87])); // 4
 const arrayOfNumbers = [2, -5, 10, 1, 4, 5]
 
 const smallestNumber = arrayOfNumbers.sort(
-function (firstNumber, secondNumber) {
+    function (firstNumber, secondNumber) {
         return firstNumber - secondNumber;
     }
 )
